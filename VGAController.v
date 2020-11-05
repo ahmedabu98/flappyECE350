@@ -15,7 +15,7 @@ module VGAController(
 	input left);
 	
 	// Lab Memory Files Location
-	localparam FILES_PATH = "C:/Users/aabua/Desktop/Lab5/";
+	localparam FILES_PATH = "C:/Users/aabua/Documents/ECE350/flappyECE350/";
 
 	// Clock divider 100 MHz -> 25 MHz
 	wire clk25; // 25MHz clock
