@@ -1,0 +1,37 @@
+module SLL16(A, result);
+    input [31:0] A;
+    output [31:0] result;
+
+    assign result[0] = 1'b0;
+    assign result[1] = 1'b0;
+    assign result[2] = 1'b0;
+    assign result[3] = 1'b0;
+    assign result[4] = 1'b0;
+    assign result[5] = 1'b0;
+    assign result[6] = 1'b0;
+    assign result[7] = 1'b0;
+    assign result[8] = 1'b0;
+    assign result[9] = 1'b0;
+    assign result[10] = 1'b0;
+    assign result[11] = 1'b0;
+    assign result[12] = 1'b0;
+    assign result[13] = 1'b0;
+    assign result[14] = 1'b0;
+    assign result[15] = 1'b0;
+    assign result[16] = A[0];
+    assign result[17] = A[1];
+    assign result[18] = A[2];
+    assign result[19] = A[3];
+    assign result[20] = A[4];
+    assign result[21] = A[5];
+    assign result[22] = A[6];
+    assign result[23] = A[7];
+    assign result[24] = A[8];
+    assign result[25] = A[9];
+    assign result[26] = A[10];
+    assign result[27] = A[11];
+    assign result[28] = A[12];
+    assign result[29] = A[13];
+    assign result[30] = A[14];
+    assign result[31] = A[15];
+endmodule

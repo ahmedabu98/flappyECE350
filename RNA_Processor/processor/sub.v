@@ -1,0 +1,37 @@
+module sub(B, B1sub);
+    input [31:0] B;
+    output [31:0] B1sub;
+
+    not B0sub(B1sub[0], B[0]);
+    not BOnesub(B1sub[1], B[1]);
+    not B2sub(B1sub[2], B[2]);
+    not B3sub(B1sub[3], B[3]);
+    not B4sub(B1sub[4], B[4]);
+    not B5sub(B1sub[5], B[5]);
+    not B6sub(B1sub[6], B[6]);
+    not B7sub(B1sub[7], B[7]);
+    not B8sub(B1sub[8], B[8]);
+    not B9sub(B1sub[9], B[9]);
+    not B10sub(B1sub[10], B[10]);
+    not B11sub(B1sub[11], B[11]);
+    not B12sub(B1sub[12], B[12]);
+    not B13sub(B1sub[13], B[13]);
+    not B14sub(B1sub[14], B[14]);
+    not B15sub(B1sub[15], B[15]);
+    not B16sub(B1sub[16], B[16]);
+    not B17sub(B1sub[17], B[17]);
+    not B18sub(B1sub[18], B[18]);
+    not B19sub(B1sub[19], B[19]);
+    not B20sub(B1sub[20], B[20]);
+    not B21sub(B1sub[21], B[21]);
+    not B22sub(B1sub[22], B[22]);
+    not B23sub(B1sub[23], B[23]);
+    not B24sub(B1sub[24], B[24]);
+    not B25sub(B1sub[25], B[25]);
+    not B26sub(B1sub[26], B[26]);
+    not B27sub(B1sub[27], B[27]);
+    not B28sub(B1sub[28], B[28]);
+    not B29sub(B1sub[29], B[29]);
+    not B30sub(B1sub[30], B[30]);
+    not B31sub(B1sub[31], B[31]);
+endmodule
