@@ -21,6 +21,13 @@ module VGAController(
 	wire clk25; // 25MHz clock
     reg [9:0] x_topleft=0;
     reg [8:0] y_topleft=0;
+	reg[9:0] column1_topleft = 520;
+	reg[9:0] column2_topleft = 680;
+	reg[9:0] column3_topleft = 840;
+	reg[9:0] column4_topleft = 1000;
+	reg[9:0] column5_topleft = 360;
+	reg[9:0] column6_topleft = 200;
+	// reg[9:0] columnY_topleft = 0;
     
 	reg[1:0] pixCounter = 0;      // Pixel counter to divide the clock
     assign clk25 = pixCounter[1]; // Set the clock high whenever the second bit (2) is high
@@ -66,7 +73,7 @@ module VGAController(
 		.DEPTH(PIXEL_COUNT), 				     // Set RAM depth to contain every pixel
 		.DATA_WIDTH(PALETTE_ADDRESS_WIDTH),      // Set data width according to the color palette
 		.ADDRESS_WIDTH(PIXEL_ADDRESS_WIDTH),     // Set address with according to the pixel count
-		.MEMFILE({FILES_PATH, "image.mem"})) // Memory initialization
+		.MEMFILE({FILES_PATH, "image1.mem"})) // Memory initialization
 	ImageData(
 		.clk(clk), 						 // Falling edge of the 100 MHz clk
 		.addr(imgAddress),					 // Image data address
@@ -76,7 +83,9 @@ module VGAController(
 	// Color Palette to Map Color Address to 12-Bit Color
 	wire[BITS_PER_COLOR-1:0] colorData; // 12-bit color data at current pixel
     wire[BITS_PER_COLOR-1:0] square_color;
+    wire[BITS_PER_COLOR-1:0] column_color;
     wire ctrl_in_square;
+	assign column_color = 12'd4095;
     assign square_color = 12'd0;
     
 	RAM #(
@@ -94,19 +103,28 @@ module VGAController(
 	// Assign to output color from register if active
 	wire[BITS_PER_COLOR-1:0] colorOut; 			  // Output color 
 	wire [BITS_PER_COLOR-1:0] active_color;
+	wire [BITS_PER_COLOR-1:0] color_placeholder;
   
-  	wire [7:0] STEP_SIZE = 2;
+  	wire [7:0] STEP_SIZE = 3;
     wire f;
-    assign f = ((x >= x_topleft) && x <= (x_topleft + 50)) && ((y >= y_topleft) && y <= (y_topleft + 50));
-	
+    assign f = ((x >= x_topleft) && x <= (x_topleft + 30)) && ((y >= y_topleft) && y <= (y_topleft + 30));
+	assign c = (((x >= column1_topleft) && x <= (column1_topleft + 50)) && (y<=100 || y>=200)) || (((x >= column2_topleft) && x <= (column2_topleft + 50)) && (y<=300 || y>=400)) || (((x >= column3_topleft) && x <= (column3_topleft + 50)) && (y<=180 || y>=280)) || (((x >= column4_topleft) && x <= (column4_topleft + 50)) && (y<=240 || y>=340)) || (((x >= column5_topleft) && x <= (column5_topleft + 50)) && (y<=300 || y>=400)) || (((x >= column6_topleft) && x <= (column6_topleft + 50)) && (y<=140 || y>=240));
+
   	always @(posedge screenEnd)
 	begin
         x_topleft <= x_topleft + right*STEP_SIZE - left*STEP_SIZE;
         y_topleft <= y_topleft + down*STEP_SIZE - up*STEP_SIZE;
+		
+		column1_topleft <= column1_topleft - 1;
+		column2_topleft <= column2_topleft - 1;
+		column3_topleft <= column3_topleft - 1;
+		column4_topleft <= column4_topleft - 1;
+		column5_topleft <= column5_topleft - 1;
+		column6_topleft <= column6_topleft - 1;
   	end
       
-
-	assign active_color = f ? square_color : colorData;
+	assign color_placeholder = c ? column_color : colorData;
+	assign active_color = f ? square_color : color_placeholder;
   
 	assign colorOut = active ? active_color : 12'd0; // When not active, output black
 
