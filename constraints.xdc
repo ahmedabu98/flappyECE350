@@ -49,3 +49,6 @@ set_property PACKAGE_PIN P18 [get_ports down]
 set_property PACKAGE_PIN P17 [get_ports left]
 set_property PACKAGE_PIN M17 [get_ports right]
 set_property PACKAGE_PIN M18 [get_ports up]
+
+set_property IOSTANDARD LVCMOS33 [get_ports didCollide]
+set_property PACKAGE_PIN H17 [get_ports didCollide]

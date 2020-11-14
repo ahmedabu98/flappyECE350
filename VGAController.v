@@ -12,7 +12,8 @@ module VGAController(
 	input up,
 	input down,
 	input right,
-	input left);
+	input left,
+	output didCollide);
 	
 	// Lab Memory Files Location
 	localparam FILES_PATH = "C:/Users/aabua/Documents/ECE350/flappyECE350/";
@@ -20,7 +21,7 @@ module VGAController(
 	// Clock divider 100 MHz -> 25 MHz
 	wire clk25; // 25MHz clock
     reg [9:0] x_topleft=0;
-    reg [8:0] y_topleft=0;
+    reg [8:0] y_topleft=225;
 	reg[9:0] column1_topleft = 520;
 	reg[9:0] column2_topleft = 680;
 	reg[9:0] column3_topleft = 840;
@@ -105,24 +106,49 @@ module VGAController(
 	wire [BITS_PER_COLOR-1:0] active_color;
 	wire [BITS_PER_COLOR-1:0] color_placeholder;
   
-  	wire [7:0] STEP_SIZE = 3;
-    wire f;
-    assign f = ((x >= x_topleft) && x <= (x_topleft + 30)) && ((y >= y_topleft) && y <= (y_topleft + 30));
+  	wire [7:0] STEP_SIZE = 2;
+    wire f,c;
+    assign f = ((x >= x_topleft) && x <= (x_topleft + 20)) && ((y >= y_topleft) && y <= (y_topleft + 30));
 	assign c = (((x >= column1_topleft) && x <= (column1_topleft + 50)) && (y<=100 || y>=200)) || (((x >= column2_topleft) && x <= (column2_topleft + 50)) && (y<=300 || y>=400)) || (((x >= column3_topleft) && x <= (column3_topleft + 50)) && (y<=180 || y>=280)) || (((x >= column4_topleft) && x <= (column4_topleft + 50)) && (y<=240 || y>=340)) || (((x >= column5_topleft) && x <= (column5_topleft + 50)) && (y<=300 || y>=400)) || (((x >= column6_topleft) && x <= (column6_topleft + 50)) && (y<=140 || y>=240));
+    
+	wire collided;
+	assign collided = f && c;
+    
+    assign didCollide = collided;
 
+//	wire reset_game;
+//	assign reset_game = reset || collided;
+
+    // try having a wrapper module that holds this one and another "collided" module.  
+	// put positions of the square and columns as outputs out of this module and inputs into the 
+	// "collided" module. have the collided module output a 1/0 collision value and use that as an input
+	// back into this module and use that input in the if() statement.
   	always @(posedge screenEnd)
 	begin
         x_topleft <= x_topleft + right*STEP_SIZE - left*STEP_SIZE;
         y_topleft <= y_topleft + down*STEP_SIZE - up*STEP_SIZE;
+
+		if(collided)
+		begin
+		  #1000
+            column1_topleft = column1_topleft - 1;
+            column2_topleft = 680;
+            column3_topleft = 840;
+            column4_topleft = 1000;
+            column5_topleft = 360;
+            column6_topleft = 200;
+		end
+		else begin
+            column1_topleft = 520;
+            column2_topleft = column2_topleft - 1;
+            column3_topleft = column3_topleft - 1;
+            column4_topleft = column4_topleft - 1;
+            column5_topleft = column5_topleft - 1;
+            column6_topleft = column6_topleft - 1;
+		end
 		
-		column1_topleft <= column1_topleft - 1;
-		column2_topleft <= column2_topleft - 1;
-		column3_topleft <= column3_topleft - 1;
-		column4_topleft <= column4_topleft - 1;
-		column5_topleft <= column5_topleft - 1;
-		column6_topleft <= column6_topleft - 1;
+		
   	end
-      
 	assign color_placeholder = c ? column_color : colorData;
 	assign active_color = f ? square_color : color_placeholder;
   

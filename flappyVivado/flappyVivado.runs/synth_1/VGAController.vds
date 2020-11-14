@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Thu Nov 12 21:53:52 2020
-# Process ID: 12852
+# Start of session at: Fri Nov 13 19:37:29 2020
+# Process ID: 20888
 # Current directory: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/synth_1
 # Command line: vivado.exe -log VGAController.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source VGAController.tcl
 # Log file: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/synth_1/VGAController.vds
@@ -17,9 +17,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1932
+INFO: [Synth 8-7075] Helper process launched with PID 6024
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1014.066 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1014.070 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'VGAController' [C:/Users/aabua/Documents/ECE350/flappyECE350/VGAController.v:2]
 	Parameter FILES_PATH bound to: C:/Users/aabua/Documents/ECE350/flappyECE350/ - type: string 
@@ -53,8 +53,8 @@ INFO: [Synth 8-6157] synthesizing module 'RAM' [C:/Users/aabua/Documents/ECE350/
 	Parameter MEMFILE bound to: 440'b01000011001110100010111101010101011100110110010101110010011100110010111101100001011000010110001001110101011000010010111101000100011011110110001101110101011011010110010101101110011101000111001100101111010001010100001101000101001100110011010100110000001011110110011001101100011000010111000001110000011110010100010101000011010001010011001100110101001100000010111101101001011011010110000101100111011001010011000100101110011011010110010101101101 
 INFO: [Synth 8-3876] $readmem data file 'C:/Users/aabua/Documents/ECE350/flappyECE350/image1.mem' is read successfully [C:/Users/aabua/Documents/ECE350/flappyECE350/RAM.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'RAM' (2#1) [C:/Users/aabua/Documents/ECE350/flappyECE350/RAM.v:2]
-WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM' is unconnected for instance 'ImageData' [C:/Users/aabua/Documents/ECE350/flappyECE350/VGAController.v:77]
-WARNING: [Synth 8-7023] instance 'ImageData' of module 'RAM' has 5 connections declared, but only 4 given [C:/Users/aabua/Documents/ECE350/flappyECE350/VGAController.v:77]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM' is unconnected for instance 'ImageData' [C:/Users/aabua/Documents/ECE350/flappyECE350/VGAController.v:78]
+WARNING: [Synth 8-7023] instance 'ImageData' of module 'RAM' has 5 connections declared, but only 4 given [C:/Users/aabua/Documents/ECE350/flappyECE350/VGAController.v:78]
 INFO: [Synth 8-6157] synthesizing module 'RAM__parameterized0' [C:/Users/aabua/Documents/ECE350/flappyECE350/RAM.v:2]
 	Parameter DATA_WIDTH bound to: 12 - type: integer 
 	Parameter ADDRESS_WIDTH bound to: 9 - type: integer 
@@ -62,22 +62,22 @@ INFO: [Synth 8-6157] synthesizing module 'RAM__parameterized0' [C:/Users/aabua/D
 	Parameter MEMFILE bound to: 440'b01000011001110100010111101010101011100110110010101110010011100110010111101100001011000010110001001110101011000010010111101000100011011110110001101110101011011010110010101101110011101000111001100101111010001010100001101000101001100110011010100110000001011110110011001101100011000010111000001110000011110010100010101000011010001010011001100110101001100000010111101100011011011110110110001101111011100100111001100101110011011010110010101101101 
 INFO: [Synth 8-3876] $readmem data file 'C:/Users/aabua/Documents/ECE350/flappyECE350/colors.mem' is read successfully [C:/Users/aabua/Documents/ECE350/flappyECE350/RAM.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'RAM__parameterized0' (2#1) [C:/Users/aabua/Documents/ECE350/flappyECE350/RAM.v:2]
-WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM' is unconnected for instance 'ColorPalette' [C:/Users/aabua/Documents/ECE350/flappyECE350/VGAController.v:96]
-WARNING: [Synth 8-7023] instance 'ColorPalette' of module 'RAM' has 5 connections declared, but only 4 given [C:/Users/aabua/Documents/ECE350/flappyECE350/VGAController.v:96]
+WARNING: [Synth 8-7071] port 'dataIn' of module 'RAM' is unconnected for instance 'ColorPalette' [C:/Users/aabua/Documents/ECE350/flappyECE350/VGAController.v:97]
+WARNING: [Synth 8-7023] instance 'ColorPalette' of module 'RAM' has 5 connections declared, but only 4 given [C:/Users/aabua/Documents/ECE350/flappyECE350/VGAController.v:97]
 INFO: [Synth 8-6155] done synthesizing module 'VGAController' (3#1) [C:/Users/aabua/Documents/ECE350/flappyECE350/VGAController.v:2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1014.066 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1014.070 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1014.066 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1014.070 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1014.066 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1014.070 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1014.066 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1014.070 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -88,29 +88,29 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/VGAController_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1046.684 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1044.020 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1046.684 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1044.020 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1046.684 ; gain = 32.617
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1044.020 ; gain = 29.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1046.684 ; gain = 32.617
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1044.020 ; gain = 29.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1046.684 ; gain = 32.617
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1044.020 ; gain = 29.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1046.684 ; gain = 32.617
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1044.020 ; gain = 29.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -123,7 +123,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	               12 Bit    Registers := 1     
 	               10 Bit    Registers := 8     
-	                9 Bit    Registers := 1     
+	                9 Bit    Registers := 2     
 	                2 Bit    Registers := 1     
 +---RAMs : 
 	            2700K Bit	(307200 X 9 bit)          RAMs := 1     
@@ -152,9 +152,8 @@ DSP Report: operator y_topleft2 is absorbed into DSP y_topleft2.
 DSP Report: Generating DSP y_topleft0, operation Mode is: PCIN-(A:0x3)*B.
 DSP Report: operator y_topleft0 is absorbed into DSP y_topleft0.
 DSP Report: operator y_topleft1 is absorbed into DSP y_topleft0.
-DSP Report: Generating DSP y_topleft_reg, operation Mode is: (PCIN+P)'.
-DSP Report: register y_topleft_reg is absorbed into DSP y_topleft_reg.
-DSP Report: operator y_topleft0_dspDelayedAccum is absorbed into DSP y_topleft_reg.
+DSP Report: Generating DSP y_topleft0_dspDelayedAccum, operation Mode is: PCIN+(A:0x0):B.
+DSP Report: operator y_topleft0_dspDelayedAccum is absorbed into DSP y_topleft0_dspDelayedAccum.
 DSP Report: Generating DSP x_topleft2, operation Mode is: (A:0x3)*B.
 DSP Report: operator x_topleft2 is absorbed into DSP x_topleft2.
 DSP Report: Generating DSP x_topleft0, operation Mode is: PCIN-(A:0x3)*B.
@@ -167,7 +166,7 @@ DSP Report: Generating DSP imgAddress, operation Mode is: C+(A:0x280)*B.
 DSP Report: operator imgAddress is absorbed into DSP imgAddress.
 DSP Report: operator imgAddress0 is absorbed into DSP imgAddress.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1046.684 ; gain = 32.617
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1044.020 ; gain = 29.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -189,7 +188,7 @@ DSP: Preliminary Mapping	Report (see note below)
 +--------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |VGAController | (A:0x3)*B      | 1      | 2      | -      | -      | 3      | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |VGAController | PCIN-(A:0x3)*B | 2      | 1      | -      | -      | 9      | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|VGAController | (PCIN+P)'      | -      | -      | -      | -      | 9      | -    | -    | -    | -    | -     | 0    | 1    | 
+|VGAController | PCIN+(A:0x0):B | 30     | 9      | -      | -      | 9      | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |VGAController | (A:0x3)*B      | 1      | 2      | -      | -      | 3      | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |VGAController | PCIN-(A:0x3)*B | 2      | 1      | -      | -      | 10     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |VGAController | (PCIN+P)'      | -      | -      | -      | -      | 10     | -    | -    | -    | -    | -     | 0    | 1    | 
@@ -204,13 +203,13 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1161.480 ; gain = 147.414
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:06 ; elapsed = 00:01:16 . Memory (MB): peak = 1169.234 ; gain = 155.164
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1162.324 ; gain = 148.258
+Finished Timing Optimization : Time (s): cpu = 00:01:06 ; elapsed = 00:01:16 . Memory (MB): peak = 1170.109 ; gain = 156.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -272,7 +271,7 @@ INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_6 (
 INFO: [Synth 8-7052] The timing for the instance ImageData/MemoryArray_reg_9_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance ColorPalette/MemoryArray_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 1178.828 ; gain = 164.762
+Finished Technology Mapping : Time (s): cpu = 00:01:06 ; elapsed = 00:01:17 . Memory (MB): peak = 1186.133 ; gain = 172.063
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -290,37 +289,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1183.609 ; gain = 169.543
+Finished IO Insertion : Time (s): cpu = 00:01:17 ; elapsed = 00:01:28 . Memory (MB): peak = 1192.902 ; gain = 178.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1183.609 ; gain = 169.543
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:17 ; elapsed = 00:01:28 . Memory (MB): peak = 1192.902 ; gain = 178.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1183.609 ; gain = 169.543
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:17 ; elapsed = 00:01:28 . Memory (MB): peak = 1192.902 ; gain = 178.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1183.609 ; gain = 169.543
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:17 ; elapsed = 00:01:28 . Memory (MB): peak = 1192.902 ; gain = 178.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1183.609 ; gain = 169.543
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:17 ; elapsed = 00:01:28 . Memory (MB): peak = 1192.902 ; gain = 178.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1183.609 ; gain = 169.543
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:17 ; elapsed = 00:01:28 . Memory (MB): peak = 1192.902 ; gain = 178.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -339,39 +338,40 @@ Report Cell Usage:
 |1     |BUFG     |     2|
 |2     |CARRY4   |    32|
 |3     |DSP48E1  |     7|
-|6     |LUT1     |     9|
-|7     |LUT2     |    20|
-|8     |LUT3     |    45|
-|9     |LUT4     |    95|
-|10    |LUT5     |    94|
-|11    |LUT6     |   125|
-|12    |RAMB18E1 |     1|
-|13    |RAMB36E1 |    80|
-|90    |FDCE     |    20|
-|91    |FDRE     |    65|
-|92    |IBUF     |     6|
-|93    |OBUF     |    14|
+|7     |LUT1     |    10|
+|8     |LUT2     |    21|
+|9     |LUT3     |    45|
+|10    |LUT4     |    98|
+|11    |LUT5     |    91|
+|12    |LUT6     |   124|
+|13    |RAMB18E1 |     1|
+|14    |RAMB36E1 |    80|
+|91    |FDCE     |    20|
+|92    |FDRE     |    51|
+|93    |FDSE     |    23|
+|94    |IBUF     |     6|
+|95    |OBUF     |    15|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1183.609 ; gain = 169.543
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:17 ; elapsed = 00:01:28 . Memory (MB): peak = 1192.902 ; gain = 178.832
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 1183.609 ; gain = 136.926
-Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1183.609 ; gain = 169.543
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:00 ; elapsed = 00:01:25 . Memory (MB): peak = 1192.902 ; gain = 148.883
+Synthesis Optimization Complete : Time (s): cpu = 00:01:17 ; elapsed = 00:01:28 . Memory (MB): peak = 1192.902 ; gain = 178.832
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1195.785 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1192.902 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 120 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1195.785 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1192.902 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 66 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 1195.785 ; gain = 181.719
+synth_design: Time (s): cpu = 00:01:29 ; elapsed = 00:01:42 . Memory (MB): peak = 1192.902 ; gain = 178.832
 INFO: [Common 17-1381] The checkpoint 'C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/synth_1/VGAController.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file VGAController_utilization_synth.rpt -pb VGAController_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 12 21:54:55 2020...
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 13 19:39:18 2020...

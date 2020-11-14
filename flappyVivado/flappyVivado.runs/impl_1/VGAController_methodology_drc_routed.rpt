@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Thu Nov 12 21:56:35 2020
+| Date         : Fri Nov 13 19:41:34 2020
 | Host         : DESKTOP-C5T2IPG running 64-bit major release  (build 9200)
 | Command      : report_methodology -file VGAController_methodology_drc_routed.rpt -pb VGAController_methodology_drc_routed.pb -rpx VGAController_methodology_drc_routed.rpx
 | Design       : VGAController
@@ -23,12 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 173
-+-----------+------------------+-----------------------------+------------+
-| Rule      | Severity         | Description                 | Violations |
-+-----------+------------------+-----------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell | 173        |
-+-----------+------------------+-----------------------------+------------+
+             Violations found: 185
++-----------+------------------+------------------------------------------+------------+
+| Rule      | Severity         | Description                              | Violations |
++-----------+------------------+------------------------------------------+------------+
+| TIMING-17 | Critical Warning | Non-clocked sequential cell              | 181        |
+| SYNTH-14  | Warning          | DSP cannot absorb non-zero init register | 4          |
++-----------+------------------+------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -894,7 +895,67 @@ Related violations: <none>
 
 TIMING-17#173 Critical Warning
 Non-clocked sequential cell  
-The clock pin y_topleft_reg/CLK is not reached by a timing clock
+The clock pin y_topleft_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#174 Critical Warning
+Non-clocked sequential cell  
+The clock pin y_topleft_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#175 Critical Warning
+Non-clocked sequential cell  
+The clock pin y_topleft_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#176 Critical Warning
+Non-clocked sequential cell  
+The clock pin y_topleft_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#177 Critical Warning
+Non-clocked sequential cell  
+The clock pin y_topleft_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#178 Critical Warning
+Non-clocked sequential cell  
+The clock pin y_topleft_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#179 Critical Warning
+Non-clocked sequential cell  
+The clock pin y_topleft_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#180 Critical Warning
+Non-clocked sequential cell  
+The clock pin y_topleft_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#181 Critical Warning
+Non-clocked sequential cell  
+The clock pin y_topleft_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+SYNTH-14#1 Warning
+DSP cannot absorb non-zero init register  
+Register y_topleft_reg[0] cannot be absorbed into DSP block due to its non-zero INIT value.
+Related violations: <none>
+
+SYNTH-14#2 Warning
+DSP cannot absorb non-zero init register  
+Register y_topleft_reg[5] cannot be absorbed into DSP block due to its non-zero INIT value.
+Related violations: <none>
+
+SYNTH-14#3 Warning
+DSP cannot absorb non-zero init register  
+Register y_topleft_reg[6] cannot be absorbed into DSP block due to its non-zero INIT value.
+Related violations: <none>
+
+SYNTH-14#4 Warning
+DSP cannot absorb non-zero init register  
+Register y_topleft_reg[7] cannot be absorbed into DSP block due to its non-zero INIT value.
 Related violations: <none>
 
 

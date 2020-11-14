@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1605236029">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1605314243">
   <File Type="BITSTR-BMM" Name="VGAController_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="VGAController_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="VGAController_timing_summary_init.rpt"/>
@@ -113,6 +113,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/../constraints.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
