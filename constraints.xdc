@@ -34,10 +34,6 @@ set_property PACKAGE_PIN B12 [get_ports vSync]
 set_property IOSTANDARD LVCMOS33 [get_ports hSync]
 set_property IOSTANDARD LVCMOS33 [get_ports vSync]
 
-set_property PACKAGE_PIN F4 [get_ports ps2_clk]
-set_property PACKAGE_PIN B2 [get_ports ps2_data]
-set_property IOSTANDARD LVCMOS33 [get_ports ps2_clk]
-set_property IOSTANDARD LVCMOS33 [get_ports ps2_data]
 
 set_property IOSTANDARD LVCMOS33 [get_ports down]
 set_property IOSTANDARD LVCMOS33 [get_ports left]
@@ -50,5 +46,6 @@ set_property PACKAGE_PIN P17 [get_ports left]
 set_property PACKAGE_PIN M17 [get_ports right]
 set_property PACKAGE_PIN M18 [get_ports up]
 
-set_property IOSTANDARD LVCMOS33 [get_ports didCollide]
-set_property PACKAGE_PIN H17 [get_ports didCollide]
+
+set_property IOSTANDARD LVCMOS33 [get_ports collided]
+set_property PACKAGE_PIN K15 [get_ports collided]
