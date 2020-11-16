@@ -1,0 +1,164 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Nov 15 14:57:25 2020
+# Process ID: 4572
+# Current directory: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17648 C:\Users\aabua\Documents\ECE350\flappyECE350\flappyVivado\flappyVivado.xpr
+# Log file: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/vivado.log
+# Journal file: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.xpr
+update_compile_order -fileset sources_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_project
+open_project C:/Users/aabua/ECElab7/ECElab7.xpr
+update_compile_order -fileset sources_1
+reset_run impl_1
+launch_runs impl_1
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/aabua/ECElab7/ECElab7.runs/impl_1/meelyCounter.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/ECElab7/ECElab7.runs/impl_1/meelyCounter.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+add_files -norecurse C:/Users/aabua/ECE350lab7/wrapper.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+close_design
+open_run impl_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list {useDigit[7]} {useDigit[6]} {useDigit[5]} {useDigit[4]} {useDigit[3]} {useDigit[2]} {useDigit[1]} {useDigit[0]}]]
+startgroup
+set_property package_pin "" [get_ports [list  {useDigit[6]}]]
+place_ports {useDigit[7]} U13
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {useDigit[5]}]]
+place_ports {useDigit[6]} K2
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {useDigit[4]}]]
+place_ports {useDigit[5]} T14
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {useDigit[3]}]]
+place_ports {useDigit[4]} P14
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {useDigit[2]}]]
+place_ports {useDigit[3]} J14
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {useDigit[1]}]]
+place_ports {useDigit[2]} T9
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {useDigit[0]}]]
+place_ports {useDigit[1]} J18
+endgroup
+place_ports {useDigit[0]} J17
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top wrapper [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+close_design
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+open_run impl_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list {useDigit[7]} {useDigit[6]} {useDigit[5]} {useDigit[4]} {useDigit[3]} {useDigit[2]} {useDigit[1]} {useDigit[0]}]]
+startgroup
+set_property package_pin "" [get_ports [list  {useDigit[6]}]]
+place_ports {useDigit[7]} U13
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {useDigit[5]}]]
+place_ports {useDigit[6]} K2
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {useDigit[4]}]]
+place_ports {useDigit[5]} T14
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {useDigit[3]}]]
+place_ports {useDigit[4]} P14
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {useDigit[2]}]]
+place_ports {useDigit[3]} J14
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {useDigit[1]}]]
+place_ports {useDigit[2]} T9
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {useDigit[0]}]]
+place_ports {useDigit[1]} J18
+endgroup
+place_ports {useDigit[0]} J17
+place_ports clk2 P17
+place_ports clk1 M17
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list clk1]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list clk2]]
+save_constraints -force
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+close_design
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1
+wait_on_run impl_1
+add_files -fileset constrs_1 -norecurse C:/Users/aabua/ECElab7/ECElab7.srcs/constrs_1/new/wrapper.xdc
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/ECElab7/ECElab7.srcs/constrs_1/new/mooreCounter.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 C:/Users/aabua/ECElab7/ECElab7.srcs/constrs_1/new/mooreCounter.xdc
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1

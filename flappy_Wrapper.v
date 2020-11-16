@@ -20,19 +20,44 @@
  *
  **/
 
-module Wrapper(clock, reset);
-    input clock, reset;
+module flappy_Wrapper(input clock, 			// 100 MHz System Clock
+	input reset, 		// Reset Signal
+	output hSync, 		// H Sync Signal
+	output vSync, 		// Veritcal Sync Signal
+	output[3:0] VGA_R,  // Red Signal Bits
+	output[3:0] VGA_G,  // Green Signal Bits
+	output[3:0] VGA_B,  // Blue Signal Bits
+	input up,
+	input down,
+	input right,
+	input left,
+	output collided,
+        output [7:0] Anode_Activate,
+        output [6:0] LED_out
+        );
 
     wire rwe, mwe, neg_clock;
     wire[4:0] rd, rs1, rs2;
     wire[31:0] instAddr, instData, 
                rData, regA, regB,
-               memAddr, memDataIn, memDataOut
-               ones_d, tens_d, hundreds_d, thousands_d;
+               memAddr, memDataIn, memDataOut;
     
     assign neg_clock = ~clock;
+
+    reg[26:0] one_second_counter;
+    wire one_second_clock, neg_one_second_clock;
+    always @(posedge clock or posedge reset)
+    begin
+        if(reset == 1 || collided == 1 || one_second_counter>=99999999)
+                one_second_counter <= 0;
+        else
+                one_second_counter <= one_second_counter + 1;
+    end
+    //slowed clock
+    assign one_second_clock = (one_second_counter==99999999)?1:0;
+    assign neg_one_second_clock = ~one_second_clock;
     ///// Main Processing Unit
-    processor CPU(.clock(clock), .reset(reset), 
+    processor CPU(.clock(one_second_clock), .reset(reset), 
                   
 		  ///// ROM
                   .address_imem(instAddr), .q_imem(instData),
@@ -48,34 +73,33 @@ module Wrapper(clock, reset);
                   
     ///// Instruction Memory (ROM)
     ROM #(.MEMFILE("instructions_RNA.mem")) // Add your memory file here
-    InstMem(.clk(neg_clock), 
+    InstMem(.clk(neg_one_second_clock), 
             .wEn(1'b0), 
             .addr(instAddr[11:0]), 
             .dataIn(32'b0), 
             .dataOut(instData));
     
+    wire[31:0] counter;
     ///// Register File
-    regfile RegisterFile(.clock(neg_clock), 
+    regfile RegisterFile(.clock(neg_one_second_clock), 
              .ctrl_writeEnable(rwe), .ctrl_reset(reset), 
              .ctrl_writeReg(rd),
              .ctrl_readRegA(rs1), .ctrl_readRegB(rs2), 
              .data_writeReg(rData), .data_readRegA(regA), .data_readRegB(regB),
-             .ones_d(ones_d), .tens_d(tens_d), .hundreds_d(hundreds_d), .thousands_d(thousands_d));
+             .counter(counter));
              
     ///// Processor Memory (RAM)
-    RAM ProcMem(.clk(neg_clock), 
+    RAM ProcMem(.clk(neg_one_second_clock), 
             .wEn(mwe), 
             .addr(memAddr[11:0]), 
             .dataIn(memDataIn), 
             .dataOut(memDataOut));
     
-    wire hSync, vSync;
-    input up, down, right, left;
-    wire [3:0] VGA_R, VGA_G, VGA_B;
 
     VGAController Screen(.clk(clock), .reset(reset),
             .hSync(hSync), .vSync(vSync),
-            .VGA_R(VGA_R), .VGA_G(VGA_G), .VGA_R(.VGA_R),
-            .up(up), .down(down), .right(right), .left(left));
+            .VGA_R(VGA_R), .VGA_G(VGA_G), .VGA_B(VGA_B),
+            .up(up), .down(down), .right(right), .left(left), .counter(counter),
+            .collided(collided), .Anode_Activate(Anode_Activate), .LED_out(LED_out));
 
 endmodule

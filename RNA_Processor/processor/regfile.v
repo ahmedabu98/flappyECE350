@@ -1,13 +1,13 @@
 module regfile(
     clock, ctrl_writeEnable, ctrl_reset, ctrl_writeReg,
     ctrl_readRegA, ctrl_readRegB, data_writeReg, data_readRegA,
-    data_readRegB, ones_d, tens_d, hundreds_d, thousands_d
+    data_readRegB, counter
 );
     input clock, ctrl_writeEnable, ctrl_reset;
     input [4:0] ctrl_writeReg, ctrl_readRegA, ctrl_readRegB;
     input [31:0] data_writeReg;
 
-    output [31:0] data_readRegA, data_readRegB, ones_d, tens_d, hundreds_d, thousands_d;
+    output [31:0] data_readRegA, data_readRegB, counter;
 
     // Decode opcodes
     wire [31:0] regA, regB, writeReg;
@@ -17,35 +17,23 @@ module regfile(
 
     // Initialization of registers?
     // Register 0 value always 32'b0
-    wire [31:0] Out0, Out1, Out2, Out3, Out4;
+    wire [31:0] Out0, Out1;
     register register0(32'b0, Out0, 1'b0, clock, ctrl_reset);
     triStateBuff_32 A0(Out0, regA[0], data_readRegA);
     triStateBuff_32 B0(Out0, regB[0], data_readRegB);
 
-    register register1(32'b0, Out1, 1'b0, clock, ctrl_reset);
+    and writeEnableReg1(write_enable[1], ctrl_writeEnable, writeReg[1]);
+    register register1(data_writeReg, Out1, write_enable[1], clock, ctrl_reset);
     triStateBuff_32 A1(Out1, regA[1], data_readRegA);
     triStateBuff_32 B1(Out1, regB[1], data_readRegB);
-    assign ones_d = Out1;
+    assign counter = Out1;
 
-    register register2(32'b0, Out2, 1'b0, clock, ctrl_reset);
-    triStateBuff_32 A2(Out2, regA[2], data_readRegA);
-    triStateBuff_32 B2(Out2, regB[2], data_readRegB);
-    assign tens_d = Out2;
-
-    register register3(32'b0, Out3, 1'b0, clock, ctrl_reset);
-    triStateBuff_32 A3(Out3, regA[3], data_readRegA);
-    triStateBuff_32 B3(Out3, regB[3], data_readRegB);
-    assign hundreds_d = Out3;
-
-    register register4(32'b0, Out4, 1'b0, clock, ctrl_reset);
-    triStateBuff_32 A4(Out4, regA[4], data_readRegA);
-    triStateBuff_32 B4(Out4, regB[4], data_readRegB);
-    assign thousands_d = Out4;
+    
 
     wire [31:0] write_enable;
     genvar i;
     generate
-        for (i=5; i<32; i=i+1) begin: loop1
+        for (i=2; i<32; i=i+1) begin: loop1
             wire[31:0] Out;
             and writeEnable(write_enable[i], ctrl_writeEnable, writeReg[i]);
             register register(data_writeReg, Out, write_enable[i], clock, ctrl_reset);

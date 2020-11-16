@@ -2,220 +2,105 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sat Nov 14 16:22:43 2020
-# Process ID: 8320
+# Start of session at: Sun Nov 15 17:25:34 2020
+# Process ID: 4604
 # Current directory: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16860 C:\Users\aabua\Documents\ECE350\flappyECE350\flappyVivado\flappyVivado.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15896 C:\Users\aabua\Documents\ECE350\flappyECE350\flappyVivado\flappyVivado.xpr
 # Log file: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/vivado.log
 # Journal file: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.xpr
 update_compile_order -fileset sources_1
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/isCollided.v] -no_script -reset -force -quiet
+remove_files  C:/Users/aabua/Documents/ECE350/flappyECE350/isCollided.v
+reset_run synth_1
+launch_runs impl_1
 wait_on_run impl_1
 open_run impl_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list {Anode_Activate[3]} {Anode_Activate[2]} {Anode_Activate[1]} {Anode_Activate[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {LED_out[6]} {LED_out[5]} {LED_out[4]} {LED_out[3]} {LED_out[2]} {LED_out[1]} {LED_out[0]}]]
+place_ports {LED_out[6]} T10
+place_ports {LED_out[5]} R10
+place_ports {LED_out[4]} K16
+place_ports {LED_out[3]} K13
+place_ports {LED_out[2]} P15
+place_ports {LED_out[1]} T11
+place_ports {LED_out[0]} L18
+place_ports {Anode_Activate[0]} J17
+place_ports {Anode_Activate[1]} J18
+place_ports {Anode_Activate[2]} T9
+place_ports {Anode_Activate[3]} J14
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+refresh_design
+set_property IOSTANDARD LVCMOS33 [get_ports [list {Anode_Activate[7]} {Anode_Activate[6]} {Anode_Activate[5]} {Anode_Activate[4]} {Anode_Activate[3]} {Anode_Activate[2]} {Anode_Activate[1]} {Anode_Activate[0]}]]
+place_ports {Anode_Activate[4]} P14
+place_ports {Anode_Activate[5]} T14
+place_ports {Anode_Activate[6]} K2
+place_ports {Anode_Activate[7]} U13
+save_constraints -force
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream
 wait_on_run impl_1
 open_hw_manager
 connect_hw_server -allow_non_jtag
 open_hw_target
-set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/upper.bit} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
 current_hw_device [get_hw_devices xc7a100t_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/upper.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top VGAController [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top VGAController [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-reset_run impl_1
-launch_runs impl_1
-wait_on_run impl_1
-refresh_design
-set_property IOSTANDARD LVCMOS33 [get_ports [list collided]]
-place_ports collided V17
-save_constraints
-reset_run impl_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
 set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
 program_hw_devices [get_hw_devices xc7a100t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-place_ports collided K15
+add_files -norecurse C:/Users/aabua/Documents/ECE350/flappyECE350/flappy_Wrapper.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top flappy_Wrapper [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/processor_memory.mem
+add_files -norecurse {C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/two_bit_comp.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/bit32_comp.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA8.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/bypass.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/adder8.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA4.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/decode_stage.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_16_32bits.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/processor.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA2.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/counter.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/sx16.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/memory_stage.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_4_32bits.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_16.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_32_32bits.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL1_div.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/multiplier.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/Wrapper.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/execute_stage_ALU.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/counter3.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/RAM.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA16.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register64.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/alu.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/stall.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL2.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/adder32.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/writeback_stage.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL4.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/eight_bit_comp.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL8.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/Wrapper_tb.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/execute_stage_MultDiv.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/AND.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_2_32bits.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_8_32bits.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/OR.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA1.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register32.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/sub.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/ROM.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/division.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/multiplication.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_8.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_32.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/control.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/dffe_ref.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_4.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_2.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/regfile.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/counter2.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/decoder_5bits.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/triStateBuff_32.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register65.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA1_mult.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/divider.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL1.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL16.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/exception_check.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/multdiv.v}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+refresh_design
+place_ports clock E3
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list clock]]
 save_constraints -force
 reset_run impl_1
 launch_runs impl_1 -to_step write_bitstream
 wait_on_run impl_1
 set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-reset_run synth_1
-launch_runs synth_1
-wait_on_run synth_1
-launch_runs impl_1
-wait_on_run impl_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-reset_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
-program_hw_devices [get_hw_devices xc7a100t_0]
-refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
-set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/VGAController.bit} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/flappy_Wrapper.bit} [get_hw_devices xc7a100t_0]
 program_hw_devices [get_hw_devices xc7a100t_0]
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]

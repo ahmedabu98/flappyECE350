@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log VGAController.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source VGAController.tcl -notrace
+EAStep vivado -log flappy_Wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source flappy_Wrapper.tcl -notrace
 
 
