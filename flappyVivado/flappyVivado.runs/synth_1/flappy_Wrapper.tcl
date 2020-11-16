@@ -88,65 +88,73 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_mem C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/processor_memory.mem
 read_verilog -library xil_defaultlib {
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/AND.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/OR.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/RAM.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/ROM.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL1.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL16.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL1_div.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL2.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL4.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL8.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA1.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA16.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA1_mult.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA2.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA4.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA8.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/VGAController.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/VGATimingGenerator.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/adder32.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/adder8.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/alu.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/bit32_comp.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/bypass.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/control.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/counter2.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/decode_stage.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/decoder_5bits.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/dffe_ref.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/division.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/eight_bit_comp.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/exception_check.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/execute_stage_ALU.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/execute_stage_MultDiv.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/memory_stage.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/multdiv.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/multiplication.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_16_32bits.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_2.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_2_32bits.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_32_32bits.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_4.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_4_32bits.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_8.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_8_32bits.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/processor.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/regfile.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register32.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register64.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register65.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/stall.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/sub.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/sx16.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/triStateBuff_32.v
   C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/two_bit_comp.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/bit32_comp.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA8.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/bypass.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/adder8.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA4.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/decode_stage.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_16_32bits.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/processor.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA2.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/counter.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/sx16.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/memory_stage.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_4_32bits.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_16.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_32_32bits.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL1_div.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/multiplier.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/Wrapper.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/execute_stage_ALU.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/counter3.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/RAM.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA16.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register64.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/alu.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/stall.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/VGATimingGenerator.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL2.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/adder32.v
   C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/writeback_stage.v
-  C:/Users/aabua/Documents/ECE350/flappyECE350/flappy_Wrapper.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL4.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/eight_bit_comp.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL8.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/Wrapper_tb.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/execute_stage_MultDiv.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/AND.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/VGAController.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_2_32bits.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_8_32bits.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/OR.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA1.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register32.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/sub.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/ROM.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/division.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/multiplication.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_8.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_32.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/control.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/dffe_ref.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_4.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_2.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/regfile.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/flappy_Wrapper.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/counter2.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/decoder_5bits.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/triStateBuff_32.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register65.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA1_mult.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/divider.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL1.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL16.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/exception_check.v
+  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/multdiv.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -157,8 +165,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/aabua/Documents/ECE350/flappyECE350/constraints.xdc
-set_property used_in_implementation false [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/constraints.xdc]
+read_xdc C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/constraints.xdc
+set_property used_in_implementation false [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/constraints.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

@@ -234,3 +234,309 @@ program_hw_devices [get_hw_devices xc7a100t_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
 INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292AE244CA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AE244CA
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Sun Nov 15 21:59:28 2020] Launched synth_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/synth_1/runme.log
+[Sun Nov 15 21:59:28 2020] Launched impl_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/flappy_Wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292AE244CA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AE244CA
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/flappy_Wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream
+[Sun Nov 15 22:34:24 2020] Launched impl_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/flappy_Wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292AE244CA
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/upper.v] -no_script -reset -force -quiet
+remove_files  C:/Users/aabua/Documents/ECE350/flappyECE350/upper.v
+update_compile_order -fileset sources_1
+set_property source_mgmt_mode DisplayOnly [current_project]
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/counter.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/Wrapper.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_32.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/counter3.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/Wrapper_tb.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RAM.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/divider.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/multiplier.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/AND.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/OR.v] -no_script -reset -force -quiet
+remove_files  {C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/counter.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/Wrapper.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_32.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/counter3.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/Wrapper_tb.v C:/Users/aabua/Documents/ECE350/flappyECE350/RAM.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/divider.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/multiplier.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/AND.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/OR.v}
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/regfile.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/processor.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_16.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/RAM.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/ROM.v] -no_script -reset -force -quiet
+remove_files  {C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/regfile.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/processor.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_16.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/RAM.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/ROM.v}
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/execute_stage_MultDiv.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/execute_stage_ALU.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/decode_stage.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/bypass.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/decoder_5bits.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/memory_stage.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/stall.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/triStateBuff_32.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/writeback_stage.v] -no_script -reset -force -quiet
+remove_files  {C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/execute_stage_MultDiv.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/execute_stage_ALU.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/decode_stage.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/bypass.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/decoder_5bits.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/memory_stage.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/stall.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/triStateBuff_32.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/writeback_stage.v}
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/alu.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/multdiv.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/sx16.v] -no_script -reset -force -quiet
+remove_files  {C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/alu.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/multdiv.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/sx16.v}
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register32.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/division.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/multiplication.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/bit32_comp.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_32_32bits.v] -no_script -reset -force -quiet
+remove_files  {C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register32.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/division.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/multiplication.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/bit32_comp.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_32_32bits.v}
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register65.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register64.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/counter2.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/adder32.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/eight_bit_comp.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_16_32bits.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL1.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL16.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL1_div.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL2.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL4.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL8.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA1.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA16.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA1_mult.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA2.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA4.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA8.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/control.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/exception_check.v] -no_script -reset -force -quiet
+remove_files  {C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register65.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register64.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/counter2.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/adder32.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/eight_bit_comp.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_16_32bits.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL1.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL16.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL1_div.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL2.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL4.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL8.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA1.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA16.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA1_mult.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA2.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA4.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA8.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/control.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/exception_check.v}
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_8_32bits.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/two_bit_comp.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/adder8.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/dffe_ref.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/sub.v] -no_script -reset -force -quiet
+remove_files  {C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_8_32bits.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/two_bit_comp.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/adder8.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/dffe_ref.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/sub.v}
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_4_32bits.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_8.v] -no_script -reset -force -quiet
+remove_files  {C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_4_32bits.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_8.v}
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_4.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_2_32bits.v] -no_script -reset -force -quiet
+remove_files  {C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_4.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_2_32bits.v}
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_2.v] -no_script -reset -force -quiet
+remove_files  C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_2.v
+add_files -norecurse {C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/two_bit_comp.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/bit32_comp.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA8.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/bypass.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/adder8.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA4.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/decode_stage.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_16_32bits.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/processor.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA2.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/counter.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/sx16.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/memory_stage.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_4_32bits.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_16.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_32_32bits.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL1_div.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/multiplier.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/Wrapper.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/execute_stage_ALU.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/counter3.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/RAM.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA16.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register64.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/alu.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/stall.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/VGATimingGenerator.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL2.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/adder32.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/writeback_stage.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL4.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/eight_bit_comp.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL8.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/Wrapper_tb.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/execute_stage_MultDiv.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/AND.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/VGAController.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_2_32bits.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_8_32bits.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/OR.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA1.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register32.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/sub.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/ROM.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/division.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/multiplication.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_8.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_32.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/control.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/dffe_ref.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_4.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/mux_2.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/regfile.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/flappy_Wrapper.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/counter2.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/decoder_5bits.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/triStateBuff_32.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/register65.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA1_mult.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/divider.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL1.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SRA.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/SLL16.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/exception_check.v C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/multdiv.v}
+add_files -norecurse C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/flappy_Wrapper.v
+WARNING: [filemgmt 56-12] File 'C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/flappy_Wrapper.v' cannot be added to the project because it already exists in the project, skipping this file
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/flappy_Wrapper.v] -no_script -reset -force -quiet
+remove_files  C:/Users/aabua/Documents/ECE350/flappyECE350/flappy_Wrapper.v
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/VGAController.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/VGATimingGenerator.v] -no_script -reset -force -quiet
+remove_files  {C:/Users/aabua/Documents/ECE350/flappyECE350/VGAController.v C:/Users/aabua/Documents/ECE350/flappyECE350/VGATimingGenerator.v}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Sun Nov 15 23:14:57 2020] Launched synth_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/synth_1/runme.log
+[Sun Nov 15 23:14:57 2020] Launched impl_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/runme.log
+export_ip_user_files -of_objects  [get_files C:/Users/aabua/Documents/ECE350/flappyECE350/constraints.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 C:/Users/aabua/Documents/ECE350/flappyECE350/constraints.xdc
+add_files -fileset constrs_1 -norecurse C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/constraints.xdc
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Sun Nov 15 23:16:42 2020] Launched synth_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/synth_1/runme.log
+[Sun Nov 15 23:16:42 2020] Launched impl_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AE244CA
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/flappy_Wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/flappy_Wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/flappy_Wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream
+[Sun Nov 15 23:31:43 2020] Launched impl_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/flappy_Wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Sun Nov 15 23:39:02 2020] Launched synth_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/synth_1/runme.log
+[Sun Nov 15 23:39:02 2020] Launched impl_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/flappy_Wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/flappy_Wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Sun Nov 15 23:55:13 2020] Launched synth_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/synth_1/runme.log
+[Sun Nov 15 23:55:13 2020] Launched impl_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/flappy_Wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Mon Nov 16 00:36:46 2020] Launched synth_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/synth_1/runme.log
+[Mon Nov 16 00:36:46 2020] Launched impl_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/flappy_Wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/flappy_Wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Mon Nov 16 00:52:27 2020] Launched synth_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/synth_1/runme.log
+[Mon Nov 16 00:52:27 2020] Launched impl_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/flappy_Wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Mon Nov 16 01:11:13 2020] Launched synth_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/synth_1/runme.log
+[Mon Nov 16 01:11:13 2020] Launched impl_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/flappy_Wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/flappy_Wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Mon Nov 16 01:21:45 2020] Launched synth_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/synth_1/runme.log
+[Mon Nov 16 01:21:45 2020] Launched impl_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/flappy_Wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Mon Nov 16 01:30:07 2020] Launched synth_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/synth_1/runme.log
+[Mon Nov 16 01:30:07 2020] Launched impl_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/flappy_Wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+[Mon Nov 16 01:36:57 2020] Launched synth_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/synth_1/runme.log
+[Mon Nov 16 01:36:57 2020] Launched impl_1...
+Run output will be captured here: C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/impl_1/flappy_Wrapper.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 16 01:44:37 2020...

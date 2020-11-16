@@ -137,7 +137,7 @@ OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/aabua/Documents/ECE350/flappyECE350/flappyVivado/flappyVivado.runs/synth_1/flappy_Wrapper.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/aabua/Documents/ECE350/flappyECE350/constraints.xdc
+  read_xdc C:/Users/aabua/Documents/ECE350/flappyECE350/RNA_Processor/processor/constraints.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

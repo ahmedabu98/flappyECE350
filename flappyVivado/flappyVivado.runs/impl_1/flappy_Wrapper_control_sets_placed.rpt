@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Sun Nov 15 20:13:23 2020
+| Date         : Mon Nov 16 01:41:19 2020
 | Host         : DESKTOP-C5T2IPG running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file flappy_Wrapper_control_sets_placed.rpt
 | Design       : flappy_Wrapper
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     8 |
-|    Minimum number of control sets                        |     8 |
+| Total control sets                                       |    51 |
+|    Minimum number of control sets                        |    51 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    37 |
+| Unused register locations in slices containing registers |    88 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     8 |
-| >= 0 to < 4        |     1 |
+| Total control sets |    51 |
+| >= 0 to < 4        |     4 |
 | >= 4 to < 6        |     0 |
-| >= 6 to < 8        |     1 |
+| >= 6 to < 8        |     3 |
 | >= 8 to < 10       |     0 |
-| >= 10 to < 12      |     3 |
+| >= 10 to < 12      |     2 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     3 |
+| >= 16              |    42 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,29 +58,72 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              12 |            9 |
-| No           | No                    | Yes                    |              30 |            9 |
-| No           | Yes                   | No                     |              19 |            5 |
-| Yes          | No                    | No                     |              54 |           22 |
-| Yes          | No                    | Yes                    |              10 |            4 |
-| Yes          | Yes                   | No                     |               6 |            6 |
+| No           | No                    | No                     |               5 |            3 |
+| No           | No                    | Yes                    |             366 |          162 |
+| No           | Yes                   | No                     |              46 |           13 |
+| Yes          | No                    | No                     |             127 |           63 |
+| Yes          | No                    | Yes                    |            1227 |          607 |
+| Yes          | Yes                   | No                     |              61 |           43 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+------------------+---------------------+------------------+------------------+----------------+--------------+
-|   Clock Signal   |    Enable Signal    | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
-+------------------+---------------------+------------------+------------------+----------------+--------------+
-|  screenEnd       |                     |                  |                1 |              2 |         2.00 |
-|  screenEnd       | Screen/start        | Screen/x_topleft |                6 |              6 |         1.00 |
-|  clock_IBUF_BUFG |                     |                  |                8 |             10 |         1.25 |
-|  Screen/clk25    |                     | reset_IBUF       |                4 |             10 |         2.50 |
-|  Screen/clk25    | Screen/Display/vPos | reset_IBUF       |                4 |             10 |         2.50 |
-|  screenEnd       |                     | Screen/x_topleft |                5 |             19 |         3.80 |
-|  clock_IBUF_BUFG |                     | reset_IBUF       |                5 |             20 |         4.00 |
-|  screenEnd       | Screen/start        |                  |               22 |             54 |         2.45 |
-+------------------+---------------------+------------------+------------------+----------------+--------------+
++------------------------+---------------------------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
+|      Clock Signal      |                      Enable Signal                      |                     Set/Reset Signal                    | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------+---------------------------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
+|  one_second_clock_BUFG |                                                         |                                                         |                1 |              1 |         1.00 |
+|  screenEnd             |                                                         |                                                         |                1 |              2 |         2.00 |
+|  clock_IBUF_BUFG       |                                                         |                                                         |                1 |              2 |         2.00 |
+|  one_second_clock_BUFG |                                                         | CPU/MultDiv/mult_div/mult/cycles/bit5/multdiv_resultRDY |                1 |              2 |         2.00 |
+|  screenEnd             | Screen/start                                            | Screen/x_topleft                                        |                6 |              6 |         1.00 |
+|  one_second_clock_BUFG |                                                         | CPU/MultDiv/mult_div/mult/cycles/bit5/q_reg_3           |                2 |              6 |         3.00 |
+|  one_second_clock_BUFG |                                                         | CPU/MultDiv/mult_div/mult/cycles/bit5/q_reg_1           |                2 |              6 |         3.00 |
+|  Screen/clk25          | Screen/Display/vPos                                     | reset_IBUF                                              |                4 |             10 |         2.50 |
+|  Screen/clk25          |                                                         | reset_IBUF                                              |                4 |             10 |         2.50 |
+|  screenEnd             |                                                         | Screen/x_topleft                                        |                6 |             19 |         3.17 |
+|  clock_IBUF_BUFG       |                                                         | reset_IBUF                                              |                5 |             20 |         4.00 |
+|  one_second_clock_BUFG | CPU/MultDiv/mult_div/mult/cycles/bit5/not_ready         | CPU/MultDiv/mult_div/mult/cycles/bit5/q_reg_4           |               19 |             27 |         1.42 |
+|  clock_IBUF_BUFG       |                                                         | Screen/one_second_counter0                              |                7 |             27 |         3.86 |
+|  one_second_clock_BUFG | CPU/MultDiv/mult_div/div/cycles/bit5/not_ready          | CPU/MultDiv/mult_div/mult/cycles/bit5/q_reg_2           |               18 |             28 |         1.56 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_18               | Screen/one_second_counter11_out                         |               14 |             32 |         2.29 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_3                | Screen/one_second_counter11_out                         |               26 |             32 |         1.23 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_31               | Screen/one_second_counter11_out                         |               13 |             32 |         2.46 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_22               | Screen/one_second_counter11_out                         |               25 |             32 |         1.28 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_6                | Screen/one_second_counter11_out                         |               16 |             32 |         2.00 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_29               | Screen/one_second_counter11_out                         |               11 |             32 |         2.91 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_7                | Screen/one_second_counter11_out                         |               13 |             32 |         2.46 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_8                | Screen/one_second_counter11_out                         |               18 |             32 |         1.78 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_28               | Screen/one_second_counter11_out                         |               19 |             32 |         1.68 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_27               | Screen/one_second_counter11_out                         |               22 |             32 |         1.45 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_1                | Screen/one_second_counter11_out                         |               10 |             32 |         3.20 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_9                | Screen/one_second_counter11_out                         |               12 |             32 |         2.67 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_15               | Screen/one_second_counter11_out                         |               18 |             32 |         1.78 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_5                | Screen/one_second_counter11_out                         |               13 |             32 |         2.46 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_11               | Screen/one_second_counter11_out                         |               17 |             32 |         1.88 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_24               | Screen/one_second_counter11_out                         |               16 |             32 |         2.00 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_14               | Screen/one_second_counter11_out                         |               14 |             32 |         2.29 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_17               | Screen/one_second_counter11_out                         |               13 |             32 |         2.46 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_20               | Screen/one_second_counter11_out                         |               16 |             32 |         2.00 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_23               | Screen/one_second_counter11_out                         |               11 |             32 |         2.91 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_26               | Screen/one_second_counter11_out                         |               18 |             32 |         1.78 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_19               | Screen/one_second_counter11_out                         |               13 |             32 |         2.46 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_10               | Screen/one_second_counter11_out                         |               18 |             32 |         1.78 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_12               | Screen/one_second_counter11_out                         |               12 |             32 |         2.67 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_2                | Screen/one_second_counter11_out                         |               20 |             32 |         1.60 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_21               | Screen/one_second_counter11_out                         |               22 |             32 |         1.45 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_25               | Screen/one_second_counter11_out                         |                7 |             32 |         4.57 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_13               | Screen/one_second_counter11_out                         |                9 |             32 |         3.56 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_30               | Screen/one_second_counter11_out                         |               13 |             32 |         2.46 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_16               | Screen/one_second_counter11_out                         |               21 |             32 |         1.52 |
+| ~one_second_clock_BUFG | CPU/regMWir/loop1[31].bit/write_enable_4                | Screen/one_second_counter11_out                         |               29 |             32 |         1.10 |
+|  one_second_clock_BUFG | CPU/MultDiv/mult_div/div/cycles/bit5/not_ready          |                                                         |               24 |             36 |         1.50 |
+|  one_second_clock_BUFG | CPU/MultDiv/mult_div/mult/cycles/bit5/not_ready         |                                                         |               17 |             37 |         2.18 |
+|  screenEnd             | Screen/start                                            |                                                         |               22 |             54 |         2.45 |
+|  one_second_clock_BUFG | CPU/MultDiv/mult_div/mult/cycles/bit5/q_reg_68          | reset_IBUF                                              |               37 |             96 |         2.59 |
+|  one_second_clock_BUFG | CPU/MultDiv/mult_div/mult/cycles/bit5/ctrl_writeEnable0 | reset_IBUF                                              |               67 |            129 |         1.93 |
+|  one_second_clock_BUFG |                                                         | reset_IBUF                                              |              148 |            322 |         2.18 |
++------------------------+---------------------------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
 
 
